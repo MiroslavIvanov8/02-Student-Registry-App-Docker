@@ -1,3 +1,13 @@
+const cors = require('cors');
+
+// Enable CORS for all routes
+app.use(cors({
+    origin: '*', // You can restrict this to specific origins
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    preflightContinue: false,
+    optionsSuccessStatus: 204
+}));
+
 const express = require('express');
 const app = express();
 app.set('view engine', 'pug');

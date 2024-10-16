@@ -3,6 +3,6 @@ services:
   app:
     image: litiers/studentapp:latest
     ports:
-      - "8081:8081" # Map port 3030 on the host to port 3030 in the container
+      - "8081:8081" # Maps host port 8081 to container port 8081
     environment:
       - NODE_ENV=production
