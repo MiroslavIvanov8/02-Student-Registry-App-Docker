@@ -1,9 +1,14 @@
 pipeline {
 	agent any
 	stages {
-		stage('test message') {
+		stage('Install dependencies') {
 			steps {
-			echo "Hello World"
+			bat 'npm install'
+		     }
+	    }
+		stage('Execute tests') {
+			steps {
+			bat 'npm test'
 		     }
 	    } 
     }
